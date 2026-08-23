@@ -26,7 +26,7 @@ public class SecurityConfig {
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    // Get frontend URL from Render Environment Variable
+    // Frontend URL from Render Environment Variable
     @Value("${FRONTEND_URL}")
     private String frontendUrl;
 
@@ -122,7 +122,8 @@ public class SecurityConfig {
                 // CORS
                 // =========================
 
-                .cors(cors -> {})
+                .cors(cors -> {
+                })
 
 
                 // =========================
@@ -153,82 +154,129 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> {
 
+                    // =========================
+                    // PUBLIC ROOT
+                    // =========================
+
+                    auth.requestMatchers("/")
+                            .permitAll();
+
+
+                    // =========================
                     // AUTH
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/auth/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC PROFILE
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/profile"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC SKILLS
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/skills/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC PROJECTS
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/projects/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC EXPERIENCE
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/experience/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC EDUCATION
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/education/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC CERTIFICATIONS
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/certifications/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC ACHIEVEMENTS
+                    // =========================
+
                     auth.requestMatchers(
                             "/api/achievements/**"
                     ).permitAll();
 
 
+                    // =========================
                     // PUBLIC CONTACT FORM
+                    // =========================
+
                     auth.requestMatchers(
                             HttpMethod.POST,
                             "/api/contact"
                     ).permitAll();
 
 
+                    // =========================
                     // ADMIN VIEW CONTACT MESSAGES
+                    // =========================
+
                     auth.requestMatchers(
                             HttpMethod.GET,
                             "/api/contact/**"
                     ).authenticated();
 
 
+                    // =========================
                     // ADMIN DELETE CONTACT MESSAGES
+                    // =========================
+
                     auth.requestMatchers(
                             HttpMethod.DELETE,
                             "/api/contact/**"
                     ).authenticated();
 
 
+                    // =========================
                     // PUBLIC UPLOADS
+                    // =========================
+
                     auth.requestMatchers(
                             "/uploads/**"
                     ).permitAll();
 
 
+                    // =========================
                     // EVERYTHING ELSE
+                    // =========================
+
                     auth.anyRequest()
                             .authenticated();
                 })
@@ -246,4 +294,3 @@ public class SecurityConfig {
         return http.build();
     }
 }
-
