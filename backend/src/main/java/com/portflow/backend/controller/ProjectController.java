@@ -1,3 +1,4 @@
+
 package com.portflow.backend.controller;
 
 import com.portflow.backend.entity.Project;
@@ -10,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin(origins = "http://localhost:5173")
 public class ProjectController {
 
     private final ProjectService projectService;
@@ -76,3 +76,4 @@ public class ProjectController {
         return ResponseEntity.noContent().build();
     }
 }
+
