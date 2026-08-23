@@ -1,4 +1,4 @@
-```java
+
 package com.portflow.backend.security;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -246,4 +246,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
-```
+
