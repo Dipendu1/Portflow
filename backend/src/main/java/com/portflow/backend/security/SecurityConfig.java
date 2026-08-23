@@ -1,6 +1,7 @@
-
+```java
 package com.portflow.backend.security;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -25,9 +26,16 @@ public class SecurityConfig {
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
+    // Get frontend URL from Render Environment Variable
+    @Value("${FRONTEND_URL}")
+    private String frontendUrl;
+
+    public SecurityConfig(
+            JwtAuthenticationFilter jwtAuthenticationFilter
+    ) {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
+
 
     // =========================
     // PASSWORD ENCODER
@@ -50,9 +58,7 @@ public class SecurityConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of(
-                        "https://portflow-neon.vercel.app"
-                )
+                List.of(frontendUrl)
         );
 
         configuration.setAllowedMethods(
@@ -80,6 +86,7 @@ public class SecurityConfig {
         );
 
         configuration.setAllowCredentials(true);
+
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
@@ -239,4 +246,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
-
+```
