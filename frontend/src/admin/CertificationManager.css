@@ -1,0 +1,434 @@
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.certification-manager {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 10px 0 30px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.manager-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.manager-header {
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.manager-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.manager-header p {
+    margin: 7px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.manager-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    color: #166534;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.certification-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input {
+    height: 45px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+
+/* INPUT FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* PLACEHOLDER */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   PDF UPLOAD
+========================================= */
+
+.pdf-upload-box {
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 25px;
+    background: #f8fafc;
+    transition: 0.2s ease;
+}
+
+.pdf-upload-box:hover {
+    border-color: #2563eb;
+    background: #f8fbff;
+}
+
+.pdf-upload-box input[type="file"] {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* UPLOAD STATUS */
+
+.pdf-upload-box p {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.pdf-upload-box .pdf-success {
+    color: #15803d;
+    font-weight: 600;
+}
+
+
+/* CURRENT PDF */
+
+.form-group small {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.form-group small a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-group small a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.form-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-actions button:first-child {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.form-actions button:first-child:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.form-actions button:first-child:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-actions button:last-child {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.form-actions button:last-child:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   CERTIFICATION LIST
+========================================= */
+
+.certification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =========================================
+   CERTIFICATION ITEM
+========================================= */
+
+.certification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    transition: 0.2s ease;
+}
+
+.certification-item:hover {
+    background: #ffffff;
+    border-color: #d1d5db;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   CERTIFICATION INFORMATION
+========================================= */
+
+.certification-item h3 {
+    margin: 0 0 6px;
+
+    color: #111827;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.certification-item p {
+    margin: 0 0 5px;
+
+    color: #4b5563;
+
+    font-size: 14px;
+}
+
+.certification-item small {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.item-actions button,
+.item-actions a {
+    border: none;
+    border-radius: 7px;
+    padding: 9px 13px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* VIEW PDF */
+
+.item-actions a {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.item-actions a:hover {
+    background: #dbeafe;
+}
+
+
+/* EDIT */
+
+.item-actions button:first-of-type {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.item-actions button:first-of-type:hover {
+    background: #e5e7eb;
+}
+
+
+/* DELETE */
+
+.item-actions button:last-of-type {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.item-actions button:last-of-type:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .certification-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        grid-column: auto;
+    }
+
+    .certification-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-actions {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .manager-card {
+        padding: 18px;
+    }
+
+    .manager-header h2 {
+        font-size: 19px;
+    }
+
+    .pdf-upload-box {
+        padding: 18px;
+    }
+
+    .item-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .item-actions button,
+    .item-actions a {
+        text-align: center;
+    }
+}
+

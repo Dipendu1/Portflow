@@ -1,0 +1,556 @@
+.education-manager {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 40px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.education-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #eef6ff;
+    color: #2563eb;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+
+    padding: 12px 16px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+.education-message button {
+    border: none;
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN CARDS
+========================================= */
+
+.education-form-card,
+.education-list-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.education-section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+/* ADD EDUCATION / EDUCATION RECORDS */
+
+.education-section-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 22px;
+
+    color: #000000;
+
+    font-weight: 700;
+}
+
+
+/* SUBTITLE */
+
+.education-section-header p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.education-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.education-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.education-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.education-form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.education-form-group input,
+.education-form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    padding: 12px 14px;
+
+    font-size: 14px;
+
+    color: #111827;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.education-form-group input {
+    height: 45px;
+}
+
+.education-form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+
+    font-family: inherit;
+}
+
+.education-form-group input:focus,
+.education-form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.education-form-group input::placeholder,
+.education-form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.education-form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.education-save-btn,
+.education-cancel-btn {
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 11px 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.education-save-btn {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.education-save-btn:hover {
+    background: #1d4ed8;
+}
+
+.education-save-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+.education-cancel-btn {
+    background: #f3f4f6;
+
+    color: #374151;
+}
+
+.education-cancel-btn:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.education-refresh-btn {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    border-radius: 8px;
+
+    padding: 9px 15px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.education-refresh-btn:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   EDUCATION LIST
+========================================= */
+
+.education-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   EDUCATION ITEM
+========================================= */
+
+.education-item {
+    border: 1px solid #e5e7eb;
+
+    border-radius: 13px;
+
+    padding: 22px;
+
+    background: #fafafa;
+
+    transition: 0.2s;
+}
+
+.education-item:hover {
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   EDUCATION ITEM HEADER
+========================================= */
+
+.education-item-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* TYPE */
+
+.education-type {
+    display: inline-block;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 20px;
+
+    padding: 5px 11px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 8px;
+}
+
+
+/* DEGREE HEADING */
+
+.education-item-header h3 {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* FIELD */
+
+.education-field {
+    margin: 5px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* YEAR */
+
+.education-year {
+    background: #f3f4f6;
+
+    color: #374151;
+
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   INSTITUTION
+========================================= */
+
+.education-institution {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    color: #374151;
+
+    font-size: 14px;
+}
+
+.education-institution strong {
+    color: #000000;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.education-description {
+    margin: 16px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================
+   ITEM ACTIONS
+========================================= */
+
+.education-item-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.education-edit-btn,
+.education-delete-btn {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 8px 14px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.education-edit-btn {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.education-edit-btn:hover {
+    background: #dbeafe;
+}
+
+.education-delete-btn {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+.education-delete-btn:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.education-empty {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #6b7280;
+}
+
+.education-empty h3 {
+    margin: 0 0 8px;
+
+    color: #000000;
+
+    font-size: 18px;
+}
+
+.education-empty p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .education-form {
+        grid-template-columns: 1fr;
+    }
+
+    .education-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .education-form-actions {
+        grid-column: auto;
+    }
+
+    .education-item-header {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .education-year {
+        align-self: flex-start;
+    }
+
+    .education-section-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .education-form-card,
+    .education-list-card {
+        padding: 20px;
+    }
+}
