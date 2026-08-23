@@ -58,7 +58,7 @@ function Contact({ profile }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/contact",
+                "https://portflow-0k8l.onrender.com/api/contact",
                 {
                     method: "POST",
 

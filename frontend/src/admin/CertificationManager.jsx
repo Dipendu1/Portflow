@@ -588,7 +588,7 @@ function CertificationManager() {
                                 Current PDF:{" "}
 
                                 <a
-                                    href={`http://localhost:8080${form.pdf}`}
+                                    href={`https://portflow-0k8l.onrender.com${form.pdf}`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -711,7 +711,7 @@ function CertificationManager() {
 
                                         <a
                                             href={
-                                                `http://localhost:8080${certification.pdf}`
+                                                `https://portflow-0k8l.onrender.com${certification.pdf}`
                                             }
                                             target="_blank"
                                             rel="noreferrer"

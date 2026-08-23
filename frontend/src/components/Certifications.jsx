@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
-const BACKEND_BASE_URL = "http://localhost:8080";
+const BACKEND_BASE_URL = "https://portflow-0k8l.onrender.com";
 
 // Old certs live in frontend/public/certificates/ (served by Vite as-is).
 // New certs uploaded via the admin dashboard live under backend/uploads/
@@ -35,7 +35,7 @@ function Certifications() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/api/certifications")
+        fetch("https://portflow-0k8l.onrender.com/api/certifications")
 
             .then(response => {
 

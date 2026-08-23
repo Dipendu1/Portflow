@@ -14,7 +14,7 @@ function Education() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/api/education")
+        fetch("https://portflow-0k8l.onrender.com/api/education")
 
             .then(response => {
 

@@ -49,7 +49,7 @@ function Achievements() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/api/achievements")
+        fetch("https://portflow-0k8l.onrender.com/api/achievements")
 
             .then(response => {
 

@@ -16,7 +16,7 @@ function Experience() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/api/experience")
+        fetch("https://portflow-0k8l.onrender.com/api/experience")
 
             .then(response => {
 

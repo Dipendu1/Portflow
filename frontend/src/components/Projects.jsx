@@ -29,7 +29,7 @@ function Projects() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/api/projects")
+        fetch("https://portflow-0k8l.onrender.com/api/projects")
 
             .then(response => {
 

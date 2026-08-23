@@ -29,7 +29,7 @@ function Skills() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/api/skills")
+        fetch("https://portflow-0k8l.onrender.com/api/skills")
 
             .then(response => {
 
