@@ -163,6 +163,15 @@ public class SecurityConfig {
 
 
                     // =========================
+                    // PUBLIC HEALTH CHECK
+                    // =========================
+
+                    auth.requestMatchers(
+                            "/health"
+                    ).permitAll();
+
+
+                    // =========================
                     // AUTH
                     // =========================
 
@@ -294,3 +303,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
+
